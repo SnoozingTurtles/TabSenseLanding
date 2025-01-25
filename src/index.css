@@ -3,8 +3,13 @@
 @tailwind components;
 @tailwind utilities;
 
+*{
+	margin: 0;
+	padding: 0;
+}
+
 body{
-  background-color: #efe8f7;
+  background-color: #fff;
 }
 
 .prosto-one-regular {
@@ -13,16 +18,14 @@ body{
 }
 
 
-button {
-	position: relative;
+.button {
 	font: inherit;
-  margin-top: -6px;
-	background-color: #d4aeff;
+	background-color: #262525;
 	border: 0;
-	color: #242424;
+	color: #fff;
 	border-radius: 0.5em;
-	font-size: 1.1rem;
-	padding: 0.375em 1em;
+	font-size: 1.7rem;
+	padding: 0.375em 0.5em;
 	font-weight: 600;
 	text-shadow: 0.0625em  0 #bcbcbc;
 	box-shadow: inset 0 0.0625em 0 0 #f4f4f4, 0 0.0625em 0 0 #efefef,
@@ -47,7 +50,6 @@ button {
 	}
 
 	&:after {
-		position: absolute;
 		content: "";
 		display: block;
 		width: 100%;
