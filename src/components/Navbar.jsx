@@ -1,20 +1,19 @@
-import { Box } from "lucide-react";
 import React from "react";
-import { IoExtensionPuzzleOutline } from "react-icons/io5";
 
 const Navbar = () => {
   return (
-    <div className="p-4">
-      <div className="bg-white rounded-xl flex prosto-one-regular justify-between">
-        <div className="flex gap-2 text-2xl font-bold">
-          <Box />
-          TabSense
+    <div className="p-12 tracking-tighter rounded-full">
+      <div className=" rounded-xl flex prosto-one-regular justify-between ">
+        <div className="flex text-2xl font-bold text-[#6daafe] justify-center items-center gap-2">
+          <img src="tabsenselogoimg.png" alt="" className="w-12" />
+          <p>
+            tab
+            <span className="font-medium text-white">sense</span>
+          </p>
         </div>
-        <div>
-          <button className="-my-4 button">
-            <IoExtensionPuzzleOutline />
-          </button>
-        </div>
+        <button className="hover:scale-110 bg-[#6daafe] text-white w-36 p-2 rounded-lg transition-all duration-300 ease-in-out delay-100 poppins tracking-tight font-semibold">
+          Get in touch
+        </button>{" "}
       </div>
     </div>
   );

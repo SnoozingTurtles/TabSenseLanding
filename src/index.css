@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Mystery+Quest&family=Prosto+One&family=Roboto:ital,wght@1,100&family=Tangerine&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -9,7 +10,8 @@
 }
 
 body{
-  background-color: #fff;
+  background-color: #121C2A;
+  
 }
 
 .prosto-one-regular {
@@ -17,46 +19,125 @@ body{
   font-style: normal;
 }
 
+.poppins {
+	font-family: "Poppins", serif;
+	font-style: normal;
+  }
 
-.button {
-	font: inherit;
-	background-color: #262525;
-	border: 0;
-	color: #fff;
-	border-radius: 0.5em;
-	font-size: 1.7rem;
-	padding: 0.375em 0.5em;
-	font-weight: 600;
-	text-shadow: 0.0625em  0 #bcbcbc;
-	box-shadow: inset 0 0.0625em 0 0 #f4f4f4, 0 0.0625em 0 0 #efefef,
-		0 0.125em 0 0 #ececec, 0 0.25em 0 0 #e0e0e0, 0 0.3125em 0 0 #dedede,
-		0 0.375em 0 0 #dcdcdc, 0 0.425em 0 0 #cacaca, 0 0.425em 0.5em 0 #cecece;
-	transition: 0.25s ease;
+.caveat {
+	font-family: "Caveat", serif;
+	font-optical-sizing: auto;
+	font-style: normal;
+  }
+
+/* From Uiverse.io by faxriddin20 */ 
+.Btn {
+	width: 50px;
+	height: 50px;
+	border: none;
+	border-radius: 50%;
+	background-color: white;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
 	cursor: pointer;
-	touch-action: manipulation;
-	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-	cursor: pointer;
+	position: relative;
+	transition-duration: 0.3s;
+	box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.11);
+  }
+  
+  .svgIcon {
+	fill: #36557f;
+  }
 
-	&:active,
-	&:hover {
-		transform: translateY(0.225em);
-		box-shadow: inset 0 0.03em 0 0 #f4f4f4, 0 0.03em 0 0 #efefef,
-			0 0.0625em 0 0 #ececec, 0 0.125em 0 0 #e0e0e0, 0 0.125em 0 0 #dedede,
-			0 0.2em 0 0 #dcdcdc, 0 0.225em 0 0 #cacaca, 0 0.225em 0.375em 0 #cecece;
-
-		&:after {
-			height: calc(100% + 0.225em);
-		}
+  .icon2 {
+	width: 28px;
+	height: 5px;
+	border-bottom: 2px solid #36557f;
+	border-left: 2px solid #36557f;
+	border-right: 2px solid #36557f;
+  }
+  
+  .tooltip {
+	position: absolute;
+	right: -80px;
+	opacity: 0;
+	background-color: rgb(12, 12, 12);
+	color: white;
+	padding: 5px 10px;
+	border-radius: 5px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition-duration: 0.2s;
+	pointer-events: none;
+	letter-spacing: 0.5px;
+  }
+  
+  .tooltip::before {
+	position: absolute;
+	content: "";
+	width: 10px;
+	height: 10px;
+	background-color: rgb(12, 12, 12);
+	background-size: 1000%;
+	background-position: center;
+	transform: rotate(45deg);
+	left: -5%;
+	transition-duration: 0.3s;
+  }
+  
+  .Btn:hover .tooltip {
+	opacity: 1;
+	transition-duration: 0.3s;
+  }
+  
+  .Btn:hover {
+	background-color: #6daafe;
+	transition-duration: 0.3s;
+  }
+  
+  .Btn:hover .icon2 {
+	border-bottom: 2px solid white;
+	border-left: 2px solid white;
+	border-right: 2px solid white;
+  }
+  
+  .Btn:hover .svgIcon {
+	fill: white;
+	animation: slide-in-top 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  }
+  
+  @keyframes slide-in-top {
+	0% {
+	  transform: translateY(-10px);
+	  opacity: 0;
 	}
-
-	&:after {
-		content: "";
-		display: block;
-		width: 100%;
-		height: calc(100% + 0.375em);
-		top: 0;
-		left: 0;
-		background-color: transparent;
-		transition: height 0.25s ease;
+  
+	100% {
+	  transform: translateY(0px);
+	  opacity: 1;
 	}
+  }
+  
+
+/* Fake Cursor */
+.fake-cursor {
+	position: absolute;
+	width: 30px;
+	height: 30px;
+	background: url('/public/cursor.png') no-repeat ;
+	background-size: contain;
+	left: 30%;
+	animation: moveCursor 2s infinite ease-in-out;
+}
+
+/* Cursor Click Animation */
+@keyframes moveCursor {
+	0% { transform: translate(-80px, 20px) scale(1); opacity: 1; }
+	50% { transform: translate(0, 0) scale(1); opacity: 1; }
+	60% { transform: translate(0, 0) scale(0.8); opacity: 1; } /* Click Effect */
+	70% { transform: translate(0, 0) scale(1); opacity: 1; }
+	100% { transform:  scale(1); opacity: 0; } 
 }

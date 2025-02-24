@@ -1,11 +1,13 @@
 import Navbar from "./components/Navbar";
 import HomeScreen from "./pages/HomeScreen";
+import Products from "./pages/Products";
 
 function App() {
   return (
-    <div className="px-8 py-4 h-full">
+    <div className="h-full ">
         <Navbar />
         <HomeScreen />
+        <Products />
     </div>
   );
 }
