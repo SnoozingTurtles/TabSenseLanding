@@ -46,7 +46,8 @@ const features = [
     visual: OtherVisual,
   },
   {
-    title: "🗑️ One-Click Cleanup – Ungroup, delete groups, close grouped tabs fast.",
+    title:
+      "🗑️ One-Click Cleanup – Ungroup, delete groups, close grouped tabs fast.",
     id: "ungroup",
     card: Team,
     visual: OtherVisual,
@@ -127,23 +128,33 @@ function Products() {
   }, [animate, fullscreenFeature, lastFullscreenFeature]);
 
   return (
-    <div className="-mt-32">
+    <div className="lg:-mt-[20rem] px-8 text-center md:px-16">
       <div ref={scope}>
         {features.map((feature) => (
           <feature.visual id={feature.id} key={feature.id} />
         ))}
-        <div className="flex w-full items-start gap-20 px-28">
-          <div className="w-full py-[50vh] font-semibold text-xl">
-            <ul>
+        <div className="flex flex-col lg:flex-row items-start gap-10 lg:gap-20">
+          {/* Feature List */}
+          <div className="w-full lg:py-[50vh] font-semibold text-lg md:text-xl">
+            <ul className="space-y-4">
               {features.map((feature) => (
                 <li key={feature.id}>
                   <FeatureTitle id={feature.id}>{feature.title}</FeatureTitle>
+                  <div className="sticky top-0 flex w-full lg:hidden justify-center lg:items-center">
+                    <div className="relative aspect-square w-full max-w-xs md:max-w-md lg:hidden rounded-2xl bg-transparent">
+                      {features.map((feature) => (
+                        <feature.card id={feature.id} key={feature.id} />
+                      ))}
+                    </div>
+                  </div>
                 </li>
               ))}
             </ul>
           </div>
-          <div className="sticky top-0 flex h-screen w-full items-center">
-            <div className="relative aspect-square w-full rounded-2xl bg-transparent ">
+
+          {/* Feature Cards */}
+          <div className="sticky top-0 flex w-full justify-center lg:items-center">
+            <div className="hidden lg:block lg:relative aspect-square w-full max-w-xs md:max-w-md lg:max-w-lg rounded-2xl bg-transparent">
               {features.map((feature) => (
                 <feature.card id={feature.id} key={feature.id} />
               ))}

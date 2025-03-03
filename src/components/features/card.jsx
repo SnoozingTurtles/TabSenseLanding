@@ -11,18 +11,12 @@ const FeatureCard = ({ gradient, children, id }) => {
   return (
     <div
       className={cn(
-        "absolute inset-0 h-full w-full rounded-2xl transition-opacity flex items-center justify-center",
+        "absolute inset-0 h-full w-full rounded-2xl lg:transition-opacity py-12 lg:flex lg:items-center lg:justify-center",
         inViewFeature === id
-          ? "active-card opacity-100"
-          : "pointer-events-none opacity-0"
+          ? "active-card lg:opacity-100"
+          : "pointer-events-none lg:opacity-0"
       )}
     >
-      <div
-        className={cn(
-          "gradient absolute inset-0 origin-bottom-left rounded-2xl bg-gradient-to-br",
-          gradient
-        )}
-      />
       {children}
       {/* <button
         onClick={() => setFullscreenFeature(id)}
