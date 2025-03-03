@@ -16,50 +16,50 @@ import { useEscapePress } from "../utils/use-escape-press";
 
 const features = [
   {
-    title: "🚀 AI-Powered Grouping – Clustr organizes your tabs instantly.",
+    title: "🚀 AI-Powered Grouping : Clustr organizes your tabs instantly.",
     id: "clustr",
     card: Todo,
     visual: OtherVisual,
   },
   {
-    title: "🎯 Custom Rules – Set rules for smarter tab management.",
+    title: "🎯 Custom Rules : Set rules for smarter tab management.",
     id: "rules",
     card: Colors,
     visual: OtherVisual,
   },
   {
-    title: "⚡ Quick Shortcuts – Manage tabs with simple key combos.",
+    title: "⚡ Quick Shortcuts : Manage tabs with simple key combos.",
     id: "shortcuts",
     card: Availability,
     visual: OtherVisual,
   },
   {
-    title: "🖱️ AI Toggle – Enable or disable AI with one click.",
+    title: "🖱️ AI Toggle : Enable or disable AI with one click.",
     id: "toggle",
     card: Music,
     visual: MusicVisual,
   },
   {
-    title: "🔄 Smart Regrouping – Refresh to auto-group tabs again.",
+    title: "🔄 Smart Regrouping : Refresh to auto-group tabs again.",
     id: "regroup",
     card: SchedulingLinks,
     visual: OtherVisual,
   },
   {
     title:
-      "🗑️ One-Click Cleanup – Ungroup, delete groups, close grouped tabs fast.",
+      "🗑️ One-Click Cleanup : Ungroup, delete groups, close grouped tabs fast.",
     id: "ungroup",
     card: Team,
     visual: OtherVisual,
   },
   {
-    title: "🗂️ Easy Tab Control – Drag tabs to group or ungroup.",
+    title: "🗂️ Easy Tab Control : Drag tabs to group or ungroup.",
     id: "tabs",
     card: Team,
     visual: OtherVisual,
   },
   {
-    title: "🌍 Smart Categorization – Shopping, research, work—auto-sorted.",
+    title: "🌍 Smart Categorization : Shopping, research, work auto-sorted.",
     id: "categorization",
     card: Team,
     visual: OtherVisual,
@@ -128,7 +128,7 @@ function Products() {
   }, [animate, fullscreenFeature, lastFullscreenFeature]);
 
   return (
-    <div className="lg:-mt-[20rem] px-8 text-center md:px-16">
+    <div className="lg:-mt-[20rem] px-8 text-center md:px-16 poppins">
       <div ref={scope}>
         {features.map((feature) => (
           <feature.visual id={feature.id} key={feature.id} />

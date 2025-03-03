@@ -1,6 +1,12 @@
 import React from "react";
 
-const HomeScreen = () => {
+const HomeScreen = ({ demoRef }) => {
+  const scrollToDemo = () => {
+    setTimeout(() => {
+      demoRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+    }, 100); // Adds a slight delay for a more natural transition
+  };
+
   return (
     <div className="min-h-screen rounded-t-xl flex flex-col lg:flex-row p-4 lg:p-8 lg:pt-28 justify-center text-white lg:gap-32 leading-none poppins">
       <div className="grid grid-cols-1 lg:grid-cols-6 w-full h-auto lg:h-1/2 justify-center items-center">
@@ -21,7 +27,7 @@ const HomeScreen = () => {
             </div>
           </div>
           <div className="hidden md:flex flex-col md:flex-row items-center justify-center lg:justify-start gap-4 md:order-1 lg:order-none mb-6">
-          <button className="bg-transparent border-2 border-[#464b54] text-[#464b54] hover:text-[#6daafe] hover:border-[#6daafe] md:w-36 lg:w-40 md:p-3 lg:p-4 rounded-lg transition-all duration-300 ease-in-out tracking-tight font-semibold">
+          <button className="bg-transparent border-2 border-[#464b54] text-[#464b54] hover:text-[#6daafe] hover:border-[#6daafe] md:w-36 lg:w-40 md:p-3 lg:p-4 rounded-lg transition-all duration-300 ease-in-out tracking-tight font-semibold" onClick={scrollToDemo}>
             Watch Demo
           </button>
           <button className="hover:scale-110 bg-[#6daafe] text-white md:w-36 lg:w-40 md:p-3 lg:p-4 rounded-lg transition-all duration-300 ease-in-out tracking-tight font-semibold">
@@ -41,7 +47,7 @@ const HomeScreen = () => {
 
         {/* Buttons */}
         <div className="flex flex-col md:hidden items-center justify-center lg:justify-start gap-4 mt-8 lg:mt-4 lg:ml-20">
-          <button className="bg-transparent border-2 border-[#464b54] text-[#464b54] hover:text-[#6daafe] hover:border-[#6daafe] w-32 text-sm p-3 rounded-lg transition-all duration-300 ease-in-out tracking-tight font-semibold">
+          <button className="bg-transparent border-2 border-[#464b54] text-[#464b54] hover:text-[#6daafe] hover:border-[#6daafe] w-32 text-sm p-3 rounded-lg transition-all duration-300 ease-in-out tracking-tight font-semibold" onClick={scrollToDemo}>
             Watch Demo
           </button>
           <button className="hover:scale-110 bg-[#6daafe] text-white w-32 text-sm p-3 rounded-lg transition-all duration-300 ease-in-out tracking-tight font-semibold">

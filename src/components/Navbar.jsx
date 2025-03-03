@@ -13,9 +13,9 @@ const Navbar = () => {
         </div>
 
         {/* Button */}
-        <button className="mt-4 md:mt-0 hover:scale-110 bg-[#6daafe] text-white w-32 md:w-36 p-2 rounded-lg transition-all duration-300 ease-in-out poppins tracking-tight font-semibold hidden md:block">
+        {/* <button className="contactbutton mt-4 md:mt-0 hover:scale-110 bg-[#6daafe] text-white w-32 md:w-36 p-2 rounded-lg transition-all duration-300 ease-in-out poppins tracking-tight font-semibold hidden md:block">
           Get in touch
-        </button>
+        </button> */}
       </div>
     </nav>
   );
