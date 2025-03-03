@@ -42,7 +42,7 @@ const HomeScreen = () => {
             playsInline
             className="w-full h-auto dark:block hidden"
           >
-            <source src="videos/TS_1.mp4" type="video/mp4" />
+            <source src="videos/TS_1.webm" type="video/mp4" />
           </video>
           <video
             autoPlay
@@ -51,7 +51,7 @@ const HomeScreen = () => {
             playsInline
             className="w-full h-auto block dark:hidden"
           >
-            <source src="videos/TS.mp4" type="video/mp4" />
+            <source src="videos/TS.webm" type="video/mp4" />
           </video>
         </div>
 
