@@ -21,7 +21,7 @@ export const MusicVisual = ({ id }) => {
 
   return (
     <Visual id={id}>
-      <img src="https://www.frontend.fyi/playground-assets/amie/window-spotify.webp" />
+      <img src="tres.png" alt=""/>
       {isFullscreen && (
         <motion.div
           layoutId="spotify-logo"
@@ -42,7 +42,7 @@ export const MusicVisual = ({ id }) => {
 export const OtherVisual = ({ id }) => {
   return (
     <Visual id={id}>
-      <img src="https://www.frontend.fyi/playground-assets/amie/window-spotify.webp" />
+      <img src="tres.png" alt="" />
     </Visual>
   );
 };

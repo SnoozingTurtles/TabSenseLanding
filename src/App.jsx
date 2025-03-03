@@ -4,7 +4,7 @@ import Products from "./pages/Products";
 
 function App() {
   return (
-    <div className="h-full ">
+    <div className="h-full overflow-x-hidden">
         <Navbar />
         <HomeScreen />
         <Products />

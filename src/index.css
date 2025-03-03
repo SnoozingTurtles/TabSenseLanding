@@ -129,7 +129,6 @@ body{
 	height: 30px;
 	background: url('/public/cursor.png') no-repeat ;
 	background-size: contain;
-	left: 30%;
 	animation: moveCursor 2s infinite ease-in-out;
 }
 

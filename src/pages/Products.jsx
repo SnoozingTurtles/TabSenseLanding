@@ -16,38 +16,50 @@ import { useEscapePress } from "../utils/use-escape-press";
 
 const features = [
   {
-    title: "Use your calendar as a todo list",
-    id: "todo-list",
+    title: "🚀 AI-Powered Grouping – Clustr organizes your tabs instantly.",
+    id: "clustr",
     card: Todo,
     visual: OtherVisual,
   },
   {
-    title: "Color your calendar to organize",
-    id: "colors",
+    title: "🎯 Custom Rules – Set rules for smarter tab management.",
+    id: "rules",
     card: Colors,
     visual: OtherVisual,
   },
   {
-    title: "Instantly know if someone is available",
-    id: "availability",
+    title: "⚡ Quick Shortcuts – Manage tabs with simple key combos.",
+    id: "shortcuts",
     card: Availability,
     visual: OtherVisual,
   },
   {
-    title: "Track what you listened to when",
-    id: "music",
+    title: "🖱️ AI Toggle – Enable or disable AI with one click.",
+    id: "toggle",
     card: Music,
     visual: MusicVisual,
   },
   {
-    title: "Send scheduling links guests love",
-    id: "scheduling-links",
+    title: "🔄 Smart Regrouping – Refresh to auto-group tabs again.",
+    id: "regroup",
     card: SchedulingLinks,
     visual: OtherVisual,
   },
   {
-    title: "Always know what your team is up to",
-    id: "team",
+    title: "🗑️ One-Click Cleanup – Ungroup, delete groups, close grouped tabs fast.",
+    id: "ungroup",
+    card: Team,
+    visual: OtherVisual,
+  },
+  {
+    title: "🗂️ Easy Tab Control – Drag tabs to group or ungroup.",
+    id: "tabs",
+    card: Team,
+    visual: OtherVisual,
+  },
+  {
+    title: "🌍 Smart Categorization – Shopping, research, work—auto-sorted.",
+    id: "categorization",
     card: Team,
     visual: OtherVisual,
   },
@@ -115,19 +127,13 @@ function Products() {
   }, [animate, fullscreenFeature, lastFullscreenFeature]);
 
   return (
-    <div className=" text-red-400">
+    <div className="-mt-32">
       <div ref={scope}>
         {features.map((feature) => (
           <feature.visual id={feature.id} key={feature.id} />
         ))}
-        <button
-          onClick={() => setFullscreenFeature(null)}
-          className="back-to-site-btn fixed bottom-6 left-1/2 z-10 -translate-x-1/2 translate-y-[300%] rounded-full bg-black px-4 py-2 text-white opacity-0 shadow-lg"
-        >
-          Back to site
-        </button>
-        <div className="flex w-full items-start gap-20 text-red-500">
-          <div className="w-full py-[50vh]">
+        <div className="flex w-full items-start gap-20 px-28">
+          <div className="w-full py-[50vh] font-semibold text-xl">
             <ul>
               {features.map((feature) => (
                 <li key={feature.id}>
@@ -137,7 +143,7 @@ function Products() {
             </ul>
           </div>
           <div className="sticky top-0 flex h-screen w-full items-center">
-            <div className="relative aspect-square w-full rounded-2xl bg-gray-100 [&:has(>_.active-card)]:bg-transparent">
+            <div className="relative aspect-square w-full rounded-2xl bg-transparent ">
               {features.map((feature) => (
                 <feature.card id={feature.id} key={feature.id} />
               ))}
