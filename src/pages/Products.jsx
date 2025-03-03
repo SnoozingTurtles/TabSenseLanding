@@ -1,11 +1,13 @@
 import { stagger, useAnimate } from "framer-motion";
 import {
-  Availability,
-  Colors,
-  Music,
-  SchedulingLinks,
-  Team,
-  Todo,
+  Shortcuts,
+  Rules,
+  Toggle,
+  Regroup,
+  Ungroup,
+  Clustr,
+  Tabs,
+  Categorization
 } from "../components/features/card";
 import FeatureTitle from "../components/features/title";
 import { MusicVisual, OtherVisual } from "../components/features/visual";
@@ -16,52 +18,52 @@ import { useEscapePress } from "../utils/use-escape-press";
 
 const features = [
   {
-    title: "🚀 AI-Powered Grouping : Clustr organizes your tabs instantly.",
+    title: "🤖 Meet Clustr: AI-Powered tab organizer that organizes tabs.",
     id: "clustr",
-    card: Todo,
+    card: Clustr,
     visual: OtherVisual,
   },
   {
     title: "🎯 Custom Rules : Set rules for smarter tab management.",
     id: "rules",
-    card: Colors,
+    card: Rules,
     visual: OtherVisual,
   },
   {
-    title: "⚡ Quick Shortcuts : Manage tabs with simple key combos.",
+    title: "⚡ Quick Shortcuts : Manage tabs with simple key combos — find details in the User Guide.",
     id: "shortcuts",
-    card: Availability,
+    card: Shortcuts,
     visual: OtherVisual,
   },
   {
     title: "🖱️ AI Toggle : Enable or disable AI with one click.",
     id: "toggle",
-    card: Music,
+    card: Toggle,
     visual: MusicVisual,
+  },
+  {
+    title:
+    "🗑️ One-Click Cleanup : Ungroup, delete groups, close grouped tabs.",
+    id: "ungroup",
+    card: Ungroup,
+    visual: OtherVisual,
   },
   {
     title: "🔄 Smart Regrouping : Refresh to auto-group tabs again.",
     id: "regroup",
-    card: SchedulingLinks,
-    visual: OtherVisual,
-  },
-  {
-    title:
-      "🗑️ One-Click Cleanup : Ungroup, delete groups, close grouped tabs fast.",
-    id: "ungroup",
-    card: Team,
+    card: Regroup,
     visual: OtherVisual,
   },
   {
     title: "🗂️ Easy Tab Control : Drag tabs to group or ungroup.",
     id: "tabs",
-    card: Team,
+    card: Tabs,
     visual: OtherVisual,
   },
   {
     title: "🌍 Smart Categorization : Shopping, research, work auto-sorted.",
     id: "categorization",
-    card: Team,
+    card: Categorization,
     visual: OtherVisual,
   },
 ];
@@ -153,8 +155,8 @@ function Products() {
           </div>
 
           {/* Feature Cards */}
-          <div className="sticky top-0 flex w-full justify-center lg:items-center">
-            <div className="hidden lg:block lg:relative aspect-square w-full max-w-xs md:max-w-md lg:max-w-lg rounded-2xl bg-transparent">
+          <div className="sticky top-0 flex w-full justify-center h-screen lg:items-center">
+            <div className="hidden lg:block lg:relative aspect-square w-full scale-110 max-w-xs md:max-w-md lg:max-w-lg rounded-2xl bg-transparent">
               {features.map((feature) => (
                 <feature.card id={feature.id} key={feature.id} />
               ))}

@@ -10,9 +10,11 @@
 }
 
 body{
-  background-color: #121C2A;
-  
+  background-color: #151e2b;
 }
+.dark body {
+	@apply bg-[#FBF9F7] ; /* Dark Mode */
+  }
 
 .prosto-one-regular {
   font-family: "Prosto One", serif;

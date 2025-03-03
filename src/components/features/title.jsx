@@ -40,7 +40,7 @@ const FeatureTitle = ({ children, id }) => {
       ref={ref}
       className={cn(
         "feature-title pt-8 lg:py-16 font-heading text-2xl md:text-3xl lg:text-4xl transition-colors",
-        isInView ? "text-[#6daafe]" : "text-gray-500"
+        isInView ? "text-[#6daafe] dark:text-[#151e2d]" : "text-gray-500"
       )}
     >
       {children}
