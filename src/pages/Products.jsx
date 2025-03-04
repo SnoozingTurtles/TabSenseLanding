@@ -155,7 +155,7 @@ function Products() {
           </div>
 
           {/* Feature Cards */}
-          <div className="sticky top-0 flex w-full justify-center h-screen lg:items-center">
+          <div className="sticky top-0 flex w-full justify-center lg:h-screen lg:items-center">
             <div className="hidden lg:block lg:relative aspect-square w-full scale-110 max-w-xs md:max-w-md lg:max-w-lg rounded-2xl bg-transparent">
               {features.map((feature) => (
                 <feature.card id={feature.id} key={feature.id} />

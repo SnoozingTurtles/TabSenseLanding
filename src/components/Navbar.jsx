@@ -28,7 +28,7 @@ const Navbar = () => {
 
   return (
     <nav className="p-4 md:p-12 tracking-tighter">
-      <div className="rounded-xl flex flex-col md:flex-row justify-between items-center">
+      <div className="rounded-xl flex justify-between items-center">
         {/* Logo Section */}
         <div className="flex text-xl md:text-2xl font-bold text-[#6daafe] dark:text-[#151e2d] items-center gap-2">
           <img src="tabsenselogoimgalt.webp" alt="Logo" className="w-8 md:w-10 hidden dark:block" />
@@ -44,12 +44,12 @@ const Navbar = () => {
         </button> */}
         <button
           onClick={toggleTheme}
-          className="p-2 rounded-lg transition-all duration-500 ease-in-out transform hover:scale-90"
+          className="p-2 rounded-lg transition-all duration-500 ease-in-out transform hover:scale-75 md:hover:scale-90"
         >
           {isDark ? (
-            <Sun className="text-[#151E2D] transition-all duration-500 ease-in-out rotate-0 scale-125 " />
+            <Sun className="text-[#151E2D] outline-none transition-all duration-500 ease-in-out rotate-0 scale-90 md:scale-125 " />
           ) : (
-            <Moon className="text-[#6daafe] transition-all duration-500 ease-in-out rotate-0 scale-125 " />
+            <Moon className="text-[#6daafe] outline-none transition-all duration-500 ease-in-out rotate-0 scale-90 md:scale-125 " />
           )}
         </button>
       </div>

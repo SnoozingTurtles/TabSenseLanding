@@ -131,8 +131,14 @@ body{
 	height: 30px;
 	background: url('/public/cursor.png') no-repeat ;
 	background-size: contain;
+	left: 10%;
+	margin-top: 4%;
 	animation: moveCursor 2s infinite ease-in-out;
 }
+
+.dark .fake-cursor {
+	background-image: url('/public/cursoralt.png');
+  }
 
 /* Cursor Click Animation */
 @keyframes moveCursor {
@@ -141,4 +147,78 @@ body{
 	60% { transform: translate(0, 0) scale(0.8); opacity: 1; } /* Click Effect */
 	70% { transform: translate(0, 0) scale(1); opacity: 1; }
 	100% { transform:  scale(1); opacity: 0; } 
+}
+
+
+
+/* Footer styles */
+.footer {
+    z-index: 1;
+    --footer-background: #6daafe;
+    display: grid;
+    position: relative;
+    grid-area: footer;
+    min-height: 12rem;
+}
+
+/* Bubbles container */
+.footer .bubbles {
+	max-width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1rem;
+    background: var(--footer-background);
+    filter: url("#blob");
+}
+
+/* Individual bubbles */
+.footer .bubbles .bubble {
+    position: absolute;
+    left: var(--position, 50%);
+    background: var(--footer-background);
+    border-radius: 100%;
+    animation: bubble-size var(--time, 4s) ease-in infinite var(--delay, 0s),
+               bubble-move var(--time, 4s) ease-in infinite var(--delay, 0s);
+    transform: translate(-50%, 70%);
+}
+
+@media (max-width: 768px) {
+  .bubbles {
+    transform: scaleY(0.5);
+    /* transform: scaleX(0.8); */
+    width: 90%;
+  }
+}
+
+/* Footer content */
+.footer .content2{
+  z-index: 2;
+    display: flex;
+    /* justify-content: center; */
+    flex-direction: column;
+    padding: 2rem;
+    background: var(--footer-background);
+}
+
+/* Animations */
+@keyframes bubble-size {
+    0%, 75% {
+        width: var(--size, 4rem);
+        height: var(--size, 4rem);
+    }
+    100% {
+        width: 0rem;
+        height: 0rem;
+    }
+}
+
+@keyframes bubble-move {
+    0% {
+        bottom: 0rem;
+    }
+    100% {
+        bottom: var(--distance, 10rem);
+    }
 }
