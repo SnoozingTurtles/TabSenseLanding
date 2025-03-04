@@ -3,7 +3,7 @@ import React from "react";
 const HomeScreen = () => {
 
   return (
-    <div className="min-h-screen rounded-t-xl flex flex-col pt-16 lg:flex-row p-4 lg:p-8 lg:pt-28 md:justify-center text-white lg:gap-32 leading-none poppins">
+    <div className="min-h-screen rounded-t-xl flex flex-col pt-20 lg:flex-row p-4 lg:p-8 lg:pt-28 md:justify-center text-white lg:gap-32 leading-none poppins">
       <div className="grid grid-cols-1 lg:grid-cols-6 w-full h-auto lg:h-1/2 justify-center items-center">
         {/* Left Content */}
         <div className="lg:col-start-1 lg:col-end-4 font-medium px-8 lg:px-20 text-center lg:text-left">
