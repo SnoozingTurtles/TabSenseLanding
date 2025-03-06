@@ -43,7 +43,7 @@ const HomeScreen = () => {
             playsInline
             className="w-full h-auto dark:block hidden"
           >
-            <source src="videos/TS_1.webm" type="video/mp4" />
+            <source src="https://store.tabsense.tech/TS_1.webm" type="video/webm" />
           </video>
           <video
             autoPlay
@@ -52,7 +52,7 @@ const HomeScreen = () => {
             playsInline
             className="w-full h-auto block dark:hidden"
           >
-            <source src="videos/TS.webm" type="video/mp4" />
+            <source src="https://store.tabsense.tech/TS.webm" type="video/webm" />
           </video>
         </div>
 

@@ -35,7 +35,7 @@ export const Clustr = ({ id }) => {
         playsInline
         className="w-full h-auto hidden dark:block"
       >
-        <source src="https://tabsense.tech/TS_11.webm" type="video/webm" />
+        <source src="https://store.tabsense.tech/TS_11.webm" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
       <video
@@ -45,7 +45,7 @@ export const Clustr = ({ id }) => {
         playsInline
         className="w-full h-auto block dark:hidden"
       >
-        <source src="https://tabsense.tech/TS1.webm" type="video/webm" />
+        <source src="https://store.tabsense.tech/TS1.webm" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
     </FeatureCard>
@@ -62,7 +62,7 @@ export const Rules = ({ id }) => {
         playsInline
         className="w-full h-auto hidden dark:block"
       >
-        <source src="https://tabsense.tech/TS_12.webm" type="video/webm" />
+        <source src="https://store.tabsense.tech/TS_12.webm" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
       <video
@@ -72,7 +72,7 @@ export const Rules = ({ id }) => {
         playsInline
         className="w-full h-auto block dark:hidden"
       >
-        <source src="https://tabsense.tech/TS2.webm" type="video/webm" />
+        <source src="https://store.tabsense.tech/TS2.webm" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
     </FeatureCard>
@@ -89,7 +89,7 @@ export const Shortcuts = ({ id }) => {
         playsInline
         className="w-full h-auto hidden dark:block"
       >
-        <source src="https://tabsense.tech/TS_13.webm" type="video/webm" />
+        <source src="https://store.tabsense.tech/TS_13.webm" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
       <video
@@ -99,7 +99,7 @@ export const Shortcuts = ({ id }) => {
         playsInline
         className="w-full h-auto block dark:hidden"
       >
-        <source src="https://tabsense.tech/TS3.webm" type="video/webm" />
+        <source src="https://store.tabsense.tech/TS3.webm" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
     </FeatureCard>
@@ -116,7 +116,7 @@ export const Toggle = ({ id }) => {
         playsInline
         className="w-full h-auto hidden dark:block"
       >
-        <source src="https://tabsense.tech/TS_14.webm" type="video/webm" />
+        <source src="https://store.tabsense.tech/TS_14.webm" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
       <video
@@ -126,7 +126,7 @@ export const Toggle = ({ id }) => {
         playsInline
         className="w-full h-auto block dark:hidden"
       >
-        <source src="https://tabsense.tech/TS4.webm" type="video/webm" />
+        <source src="https://store.tabsense.tech/TS4.webm" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
     </FeatureCard>
@@ -143,7 +143,7 @@ export const Ungroup = ({ id }) => {
         playsInline
         className="w-full h-auto hidden dark:block"
       >
-        <source src="https://tabsense.tech/TS_15.webm" type="video/webm" />
+        <source src="https://store.tabsense.tech/TS_15.webm" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
       <video
@@ -153,7 +153,7 @@ export const Ungroup = ({ id }) => {
         playsInline
         className="w-full h-auto block dark:hidden"
       >
-        <source src="https://tabsense.tech/TS5.webm" type="video/webm" />
+        <source src="https://store.tabsense.tech/TS5.webm" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
     </FeatureCard>
@@ -170,7 +170,7 @@ export const Regroup = ({ id }) => {
         playsInline
         className="w-full h-auto hidden dark:block"
       >
-        <source src="https://tabsense.tech/TS_16.webm" type="video/webm" />
+        <source src="https://store.tabsense.tech/TS_16.webm" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
       <video
@@ -180,7 +180,7 @@ export const Regroup = ({ id }) => {
         playsInline
         className="w-full h-auto block dark:hidden"
       >
-        <source src="https://tabsense.tech/TS6.webm" type="video/webm" />
+        <source src="https://store.tabsense.tech/TS6.webm" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
     </FeatureCard>
@@ -197,7 +197,7 @@ export const Tabs = ({ id }) => {
         playsInline
         className="w-full h-auto hidden dark:block"
       >
-        <source src="https://tabsense.tech/TS_17.webm" type="video/webm" />
+        <source src="https://store.tabsense.tech/TS_17.webm" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
       <video
@@ -207,7 +207,7 @@ export const Tabs = ({ id }) => {
         playsInline
         className="w-full h-auto block dark:hidden"
       >
-        <source src="https://tabsense.tech/TS7.webm" type="video/webm" />
+        <source src="https://store.tabsense.tech/TS7.webm" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
     </FeatureCard>
@@ -224,7 +224,7 @@ export const Categorization = ({ id }) => {
         playsInline
         className="w-full h-auto hidden dark:block text-black"
       >
-        <source src="https://tabsense.tech/TS_18.webm" type="video/webm" />
+        <source src="https://store.tabsense.tech/TS_18.webm" type="video/webm" />
         Your browser does not support the video tag.
       </video>
       <video
@@ -234,7 +234,7 @@ export const Categorization = ({ id }) => {
         playsInline
         className="w-full h-auto block dark:hidden"
       >
-        <source src="https://tabsense.tech/TS8.webm" type="video/webm" />
+        <source src="https://store.tabsense.tech/TS8.webm" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
     </FeatureCard>
