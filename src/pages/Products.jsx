@@ -130,7 +130,7 @@ function Products() {
   }, [animate, fullscreenFeature, lastFullscreenFeature]);
 
   return (
-    <div className="lg:-mt-[20rem] px-8 text-center md:px-16 poppins">
+    <div className="px-8 text-center md:px-16 poppins">
       <div ref={scope}>
         {features.map((feature) => (
           <feature.visual id={feature.id} key={feature.id} />

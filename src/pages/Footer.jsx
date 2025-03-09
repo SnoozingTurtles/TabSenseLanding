@@ -34,7 +34,7 @@ const Footer = () => {
               </p>
             </div>
             <div className="flex items-center justify-between md:px-20 lg:px-32  md:text-sm lg:text-lg text-xs">
-              <p className="text-white poppins font-semibold">
+              <p className="text-white poppins font-normal">
                 Submit your feedback{" "}
                 <a
                   target="_blank"
@@ -47,10 +47,10 @@ const Footer = () => {
                 </a>
               </p>
               <div className="text-white flex md:gap-4">
-                <Instagram className="scale-75 md:scale-100 cursor-pointer transition-all delay-100 hover:scale-125 outline-none hover:text-[#151e2d]" />
-                <Twitter className="scale-75 md:scale-100 cursor-pointer transition-all delay-100 hover:scale-125 outline-none hover:text-[#151e2d]" />
-                <Linkedin className="scale-75 md:scale-100 cursor-pointer transition-all delay-100 hover:scale-125 outline-none hover:text-[#151e2d]" />
-                <Github className="scale-75 md:scale-100 cursor-pointer transition-all delay-100 hover:scale-125 outline-none hover:text-[#151e2d]" />
+                <Instagram className="scale-75 md:scale-100 cursor-pointer transition-all delay-200 duration-200 hover:scale-125 outline-none lg:hover:text-[#151e2d]" />
+                <Twitter className="scale-75 md:scale-100 cursor-pointer transition-all delay-200 duration-200 hover:scale-125 outline-none lg:hover:text-[#151e2d]" />
+                <Linkedin className="scale-75 md:scale-100 cursor-pointer transition-all delay-200 duration-200 hover:scale-125 outline-none lg:hover:text-[#151e2d]" />
+                <Github className="scale-75 md:scale-100 cursor-pointer transition-all delay-200 duration-200 hover:scale-125 outline-none lg:hover:text-[#151e2d]" />
               </div>
             </div>
           </div>
