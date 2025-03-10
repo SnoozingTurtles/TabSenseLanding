@@ -8,7 +8,7 @@ const FeatureCard = ({ gradient, children, id }) => {
   return (
     <div
       className={cn(
-        "absolute inset-0 h-full w-full rounded-2xl lg:transition-opacity py-12 lg:flex lg:items-center lg:justify-center",
+        "absolute inset-0 h-full w-full rounded-2xl lg:transition-opacity py-12 flex items-center justify-center",
         inViewFeature === id
           ? "active-card lg:opacity-100"
           : "pointer-events-none lg:opacity-0"
@@ -28,26 +28,23 @@ const FeatureCard = ({ gradient, children, id }) => {
 export const Clustr = ({ id }) => {
   return (
     <FeatureCard id={id}>
-      <video
-        autoPlay
-        loop
-        muted
-        playsInline
-        className="w-full h-auto hidden dark:block"
+      <div
+        className="w-4/5 
+         h-auto hidden dark:block perspective-1000 transform transition-all duration-500 
+    lg:hover:scale-105 hover:rotate-x-3 hover:rotate-y-3 
+    shadow-lg hover:shadow-2xl shadow-gray-600/50"
       >
-        <source src="https://store.tabsense.tech/TS_11.webm" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
-      <video
-        autoPlay
-        loop
-        muted
-        playsInline
-        className="w-full h-auto block dark:hidden"
+        <img src="/cards/TS_1.webp" alt="" />
+      </div>
+      <div
+        className="w-4/5
+         h-auto block dark:hidden 
+    perspective-1000 transform transition-all duration-500 
+    lg:hover:scale-105 hover:rotate-x-3 hover:rotate-y-3 
+    shadow-lg hover:shadow-2xl shadow-gray-600/50"
       >
-        <source src="https://store.tabsense.tech/TS1.webm" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
+        <img src="/cards/TS1.webp" alt="" />
+      </div>
     </FeatureCard>
   );
 };
@@ -55,26 +52,22 @@ export const Clustr = ({ id }) => {
 export const Rules = ({ id }) => {
   return (
     <FeatureCard id={id}>
-      <video
-        autoPlay
-        loop
-        muted
-        playsInline
-        className="w-full h-auto hidden dark:block"
+      <div
+        className="w-4/5 
+         h-auto hidden dark:block perspective-1000 transform transition-all duration-500 
+    lg:hover:scale-105 hover:rotate-x-3 hover:rotate-y-3 
+    shadow-lg hover:shadow-2xl shadow-gray-600/50"
       >
-        <source src="https://store.tabsense.tech/TS_12.webm" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
-      <video
-        autoPlay
-        loop
-        muted
-        playsInline
-        className="w-full h-auto block dark:hidden"
+        <img src="/cards/TS_2.webp" alt="" />
+      </div>
+      <div
+        className="w-4/5 
+         h-auto block dark:hidden perspective-1000 transform transition-all duration-500 
+    lg:hover:scale-105 hover:rotate-x-3 hover:rotate-y-3 
+    shadow-lg hover:shadow-2xl shadow-gray-600/50"
       >
-        <source src="https://store.tabsense.tech/TS2.webm" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
+        <img src="/cards/TS2.webp" alt="" />
+      </div>
     </FeatureCard>
   );
 };
@@ -82,26 +75,22 @@ export const Rules = ({ id }) => {
 export const Shortcuts = ({ id }) => {
   return (
     <FeatureCard id={id}>
-      <video
-        autoPlay
-        loop
-        muted
-        playsInline
-        className="w-full h-auto hidden dark:block"
+      <div
+        className="w-4/5 
+         h-auto hidden dark:block perspective-1000 transform transition-all duration-500 
+    lg:hover:scale-105 hover:rotate-x-3 hover:rotate-y-3 
+    shadow-lg hover:shadow-2xl shadow-gray-600/50"
       >
-        <source src="https://store.tabsense.tech/TS_13.webm" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
-      <video
-        autoPlay
-        loop
-        muted
-        playsInline
-        className="w-full h-auto block dark:hidden"
+        <img src="/cards/TS_3.webp" alt="" />
+      </div>
+      <div
+        className="w-4/5 
+         h-auto block dark:hidden perspective-1000 transform transition-all duration-500 
+    lg:hover:scale-105 hover:rotate-x-3 hover:rotate-y-3 
+    shadow-lg hover:shadow-2xl shadow-gray-600/50"
       >
-        <source src="https://store.tabsense.tech/TS3.webm" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
+        <img src="/cards/TS3.webp" alt="" />
+      </div>
     </FeatureCard>
   );
 };
@@ -109,80 +98,45 @@ export const Shortcuts = ({ id }) => {
 export const Toggle = ({ id }) => {
   return (
     <FeatureCard id={id}>
-      <video
-        autoPlay
-        loop
-        muted
-        playsInline
-        className="w-full h-auto hidden dark:block"
+      <div
+        className="w-4/5 
+         h-auto hidden dark:block perspective-1000 transform transition-all duration-500 
+    lg:hover:scale-105 hover:rotate-x-3 hover:rotate-y-3 
+    shadow-lg hover:shadow-2xl shadow-gray-600/50"
       >
-        <source src="https://store.tabsense.tech/TS_14.webm" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
-      <video
-        autoPlay
-        loop
-        muted
-        playsInline
-        className="w-full h-auto block dark:hidden"
+        <img src="/cards/TS_4.webp" alt="" />
+      </div>
+      <div
+        className="w-4/5 
+         h-auto block dark:hidden perspective-1000 transform transition-all duration-500 
+    lg:hover:scale-105 hover:rotate-x-3 hover:rotate-y-3 
+    shadow-lg hover:shadow-2xl shadow-gray-600/50"
       >
-        <source src="https://store.tabsense.tech/TS4.webm" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
+        <img src="/cards/TS4.webp" alt="" />
+      </div>
     </FeatureCard>
   );
 };
 
-export const Ungroup = ({ id }) => {
+export const TabManagement = ({ id }) => {
   return (
     <FeatureCard id={id}>
-      <video
-        autoPlay
-        loop
-        muted
-        playsInline
-        className="w-full h-auto hidden dark:block"
+      <div
+        className="w-4/5 
+         h-auto hidden dark:block perspective-1000 transform transition-all duration-500 
+    lg:hover:scale-105 hover:rotate-x-3 hover:rotate-y-3 
+    shadow-lg hover:shadow-2xl shadow-gray-600/50"
       >
-        <source src="https://store.tabsense.tech/TS_15.webm" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
-      <video
-        autoPlay
-        loop
-        muted
-        playsInline
-        className="w-full h-auto block dark:hidden"
+        <img src="/cards/TS_5.webp" alt="" />
+      </div>
+      <div
+        className="w-4/5 
+         h-auto block dark:hidden perspective-1000 transform transition-all duration-500 
+    lg:hover:scale-105 hover:rotate-x-3 hover:rotate-y-3 
+    shadow-lg hover:shadow-2xl shadow-gray-600/50"
       >
-        <source src="https://store.tabsense.tech/TS5.webm" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
-    </FeatureCard>
-  );
-};
-
-export const Regroup = ({ id }) => {
-  return (
-    <FeatureCard id={id}>
-      <video
-        autoPlay
-        loop
-        muted
-        playsInline
-        className="w-full h-auto hidden dark:block"
-      >
-        <source src="https://store.tabsense.tech/TS_16.webm" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
-      <video
-        autoPlay
-        loop
-        muted
-        playsInline
-        className="w-full h-auto block dark:hidden"
-      >
-        <source src="https://store.tabsense.tech/TS6.webm" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
+        <img src="/cards/TS5.webp" alt="" />
+      </div>
     </FeatureCard>
   );
 };
@@ -190,26 +144,22 @@ export const Regroup = ({ id }) => {
 export const Tabs = ({ id }) => {
   return (
     <FeatureCard id={id}>
-      <video
-        autoPlay
-        loop
-        muted
-        playsInline
-        className="w-full h-auto hidden dark:block"
+      <div
+        className="w-4/5 
+         h-auto hidden dark:block perspective-1000 transform transition-all duration-500 
+    lg:hover:scale-105 hover:rotate-x-3 hover:rotate-y-3 
+    shadow-lg hover:shadow-2xl shadow-gray-600/50"
       >
-        <source src="https://store.tabsense.tech/TS_17.webm" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
-      <video
-        autoPlay
-        loop
-        muted
-        playsInline
-        className="w-full h-auto block dark:hidden"
+        <img src="/cards/TS_6.webp" alt="" />
+      </div>
+      <div
+        className="w-4/5 
+         h-auto block dark:hidden perspective-1000 transform transition-all duration-500 
+    lg:hover:scale-105 hover:rotate-x-3 hover:rotate-y-3 
+    shadow-lg hover:shadow-2xl shadow-gray-600/50"
       >
-        <source src="https://store.tabsense.tech/TS7.webm" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
+        <img src="/cards/TS6.webp" alt="" />
+      </div>
     </FeatureCard>
   );
 };
@@ -217,26 +167,22 @@ export const Tabs = ({ id }) => {
 export const Categorization = ({ id }) => {
   return (
     <FeatureCard id={id}>
-      <video
-        autoPlay
-        loop
-        muted
-        playsInline
-        className="w-full h-auto hidden dark:block text-black"
+      <div
+        className="w-4/5 
+         h-auto hidden dark:block perspective-1000 transform transition-all duration-500 
+    lg:hover:scale-105 hover:rotate-x-3 hover:rotate-y-3 
+    shadow-lg hover:shadow-2xl shadow-gray-600/50"
       >
-        <source src="https://store.tabsense.tech/TS_18.webm" type="video/webm" />
-        Your browser does not support the video tag.
-      </video>
-      <video
-        autoPlay
-        loop
-        muted
-        playsInline
-        className="w-full h-auto block dark:hidden"
+        <img src="/cards/TS_7.webp" alt="" />
+      </div>
+      <div
+        className="w-4/5 
+         h-auto block dark:hidden perspective-1000 transform transition-all duration-500 
+    lg:hover:scale-105 hover:rotate-x-3 hover:rotate-y-3 
+    shadow-lg hover:shadow-2xl shadow-gray-600/50"
       >
-        <source src="https://store.tabsense.tech/TS8.webm" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
+        <img src="/cards/TS7.webp" alt="" />
+      </div>
     </FeatureCard>
   );
 };

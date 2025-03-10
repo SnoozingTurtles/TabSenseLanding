@@ -1,20 +1,14 @@
-import { stagger, useAnimate } from "framer-motion";
 import {
   Shortcuts,
   Rules,
   Toggle,
-  Regroup,
-  Ungroup,
   Clustr,
   Tabs,
-  Categorization
+  Categorization,
+  TabManagement,
 } from "../components/features/card";
 import FeatureTitle from "../components/features/title";
 import { MusicVisual, OtherVisual } from "../components/features/visual";
-import { useFeatureStore } from "../components/features/store";
-import { useEffect } from "react";
-import { useHidePageOverflow } from "../utils/toggle-page-overflow";
-import { useEscapePress } from "../utils/use-escape-press";
 
 const features = [
   {
@@ -30,7 +24,8 @@ const features = [
     visual: OtherVisual,
   },
   {
-    title: "⚡ Quick Shortcuts : Manage tabs with simple key combos — find details in the User Guide.",
+    title:
+      "⚡ Quick Shortcuts : Manage tabs with simple key combos — find details in the User Guide.",
     id: "shortcuts",
     card: Shortcuts,
     visual: OtherVisual,
@@ -42,18 +37,12 @@ const features = [
     visual: MusicVisual,
   },
   {
-    title:
-    "🗑️ One-Click Cleanup : Ungroup, delete groups, close grouped tabs.",
-    id: "ungroup",
-    card: Ungroup,
+    title: "🔄 Smart Tab Management: Ungroup & Auto-Regroup Tabs.",
+    id: "tabmanagement",
+    card: TabManagement,
     visual: OtherVisual,
   },
-  {
-    title: "🔄 Smart Regrouping : Refresh to auto-group tabs again.",
-    id: "regroup",
-    card: Regroup,
-    visual: OtherVisual,
-  },
+
   {
     title: "🗂️ Easy Tab Control : Drag tabs to group or ungroup.",
     id: "tabs",
@@ -69,102 +58,45 @@ const features = [
 ];
 
 function Products() {
-  const [scope, animate] = useAnimate();
-  const fullscreenFeature = useFeatureStore((state) => state.fullscreenFeature);
-  const lastFullscreenFeature = useFeatureStore(
-    (state) => state.lastFullscreenFeature
-  );
-  const setFullscreenFeature = useFeatureStore(
-    (state) => state.setFullscreenFeature
-  );
-
-  const onEscapePress = () => {
-    if (fullscreenFeature) setFullscreenFeature(null);
-  };
-
-  useEscapePress(onEscapePress);
-  useHidePageOverflow(!!fullscreenFeature);
-
-  useEffect(() => {
-    if (fullscreenFeature) {
-      animate([
-        [
-          ".feature-title",
-          { opacity: 0, x: "-200px" },
-          { duration: 0.3, delay: stagger(0.05) },
-        ],
-        [
-          `.visual-${lastFullscreenFeature}`,
-          { opacity: 1, scale: 1, pointerEvents: "auto" },
-          { at: "<" },
-        ],
-        [".active-card .gradient", { opacity: 0, scale: 0 }, { at: "<" }],
-        [".active-card .show-me-btn", { opacity: 0 }, { at: "<" }],
-        [
-          ".back-to-site-btn",
-          { opacity: 1, y: "0px" },
-          { at: "<", duration: 0.3 },
-        ],
-      ]);
-    } else {
-      animate([
-        [
-          ".feature-title",
-          { opacity: 1, x: "0px" },
-          { duration: 0.3, delay: stagger(0.05) },
-        ],
-        [
-          `.visual-${lastFullscreenFeature}`,
-          { opacity: 0, scale: 0.75, pointerEvents: "none" },
-          { at: "<" },
-        ],
-        [".active-card .gradient", { opacity: 1, scale: 1 }, { at: "<" }],
-        [
-          ".back-to-site-btn",
-          { opacity: 0, y: "300px" },
-          { at: "<", duration: 0.3 },
-        ],
-        [".active-card .show-me-btn", { opacity: 1 }],
-      ]);
-    }
-  }, [animate, fullscreenFeature, lastFullscreenFeature]);
-
   return (
-    <div className="px-8 text-center md:px-16 poppins">
-      <div ref={scope}>
-        {features.map((feature) => (
-          <feature.visual id={feature.id} key={feature.id} />
-        ))}
-        <div className="flex flex-col lg:flex-row items-start gap-10 lg:gap-20">
-          {/* Feature List */}
-          <div className="w-full lg:py-[50vh] font-semibold text-lg md:text-xl">
-            <ul className="space-y-4">
-              {features.map((feature) => (
-                <li key={feature.id}>
-                  <FeatureTitle id={feature.id}>{feature.title}</FeatureTitle>
-                  <div className="sticky top-0 flex w-full lg:hidden justify-center lg:items-center">
-                    <div className="relative aspect-square w-full max-w-xs md:max-w-md lg:hidden rounded-2xl bg-transparent">
-                      {features.map((feature) => (
-                        <feature.card id={feature.id} key={feature.id} />
-                      ))}
-                    </div>
-                  </div>
-                </li>
-              ))}
-            </ul>
-          </div>
+    <div className="px-6 md:px-12 lg:px-16 text-center poppins pb-20">
+  <div>
+    {/* Feature Visuals */}
+    {features.map((feature) => (
+      <feature.visual id={feature.id} key={feature.id} />
+    ))}
 
-          {/* Feature Cards */}
-          <div className="sticky top-0 flex w-full justify-center lg:h-screen lg:items-center">
-            <div className="hidden lg:block lg:relative aspect-square w-full scale-110 max-w-xs md:max-w-md lg:max-w-lg rounded-2xl bg-transparent">
-              {features.map((feature) => (
-                <feature.card id={feature.id} key={feature.id} />
-              ))}
-            </div>
-          </div>
+    <div className="flex flex-col lg:flex-row items-start gap-8 md:gap-12 lg:gap-20">
+      {/* Feature List */}
+      <div className="w-full lg:py-[40vh] font-semibold text-base sm:text-lg md:text-xl">
+        <ul className="space-y-4">
+          {features.map((feature) => (
+            <li key={feature.id}>
+              <FeatureTitle id={feature.id}>{feature.title}</FeatureTitle>
+
+              {/* Mobile Feature Cards */}
+              <div className="sticky top-0 w-auto h-auto lg:hidden flex justify-center items-center">
+                <div className="relative aspect-square w-full max-w-xs sm:max-w-sm md:max-w-md rounded-2xl bg-transparent flex justify-center items-center">
+                  <feature.card id={feature.id} key={feature.id} />
+                </div>
+              </div>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      {/* Desktop Feature Cards */}
+      <div className="hidden lg:flex sticky top-0 w-full justify-center lg:h-screen items-center">
+        <div>
+          {features.map((feature) => (
+            <feature.card id={feature.id} key={feature.id} />
+          ))}
         </div>
       </div>
     </div>
+  </div>
+</div>
+
   );
 }
 

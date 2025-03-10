@@ -27,13 +27,13 @@ const Footer = () => {
 
           {/* Content sections */}
           <div className="content2">
-            <div className="text-white text-sm md:text-lg lg:text-2xl text-center tect font-bold prosto-one-regular w-full flex justify-center pb-8 md:pb-0 md:py-8 lg:py-12">
-              <p className="text-center md:w-2/3">
+            <div className="text-white text-sm md:text-lg lg:text-2xl text-center tect font-bold prosto-one-regular w-full flex justify-center pb-8 md:pb-0 md:py-4 lg:py-12">
+              <p className="text-center md:w-2/3 ">
                 We’d love to hear your thoughts! Share your feedback with us and
                 help improve Clustr.
               </p>
             </div>
-            <div className="flex items-center justify-between md:px-20 lg:px-32  md:text-sm lg:text-lg text-xs">
+            <div className="flex items-center justify-between pt-8 md:px-20 lg:px-32  md:text-sm lg:text-lg text-xs">
               <p className="text-white poppins font-normal">
                 Submit your feedback{" "}
                 <a
