@@ -1,6 +1,13 @@
 import React from "react";
 
 const HomeScreen = () => {
+  function handleClick() {
+    window.open(
+      "https://chromewebstore.google.com/detail/tabsense/pgnhdikopgdnekgcdaabhffbppabbfcn",
+      "_blank"
+    );
+  }
+
   return (
     <div className=" flex flex-col lg:flex-row items-center px-4 py-12 lg:py-0 lg:px-12 text-white">
       {/* Left Content */}
@@ -19,7 +26,10 @@ const HomeScreen = () => {
 
         {/* Buttons */}
         <div className="flex flex-col lg:flex-row items-center gap-8">
-          <button className="hover:scale-110 bg-[#6daafe] text-white w-40 p-3 rounded-lg transition-all duration-300 ease-in-out tracking-tight font-semibold">
+          <button
+            className="hover:scale-110 bg-[#6daafe] text-white w-40 p-3 rounded-lg transition-all duration-300 ease-in-out tracking-tight font-semibold"
+            onClick={handleClick}
+          >
             Add Extension
           </button>
           <div className="fake-cursor hidden lg:block"></div>

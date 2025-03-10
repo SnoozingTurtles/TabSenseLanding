@@ -1,4 +1,4 @@
-import { Github, Instagram, Linkedin, Twitter } from "lucide-react";
+import { Instagram, Linkedin, Twitter } from "lucide-react";
 import React from "react";
 
 const Footer = () => {
@@ -47,10 +47,21 @@ const Footer = () => {
                 </a>
               </p>
               <div className="text-white flex md:gap-4">
-                <Instagram className="scale-75 md:scale-100 cursor-pointer transition-all delay-200 duration-200 lg:hover:scale-125 outline-none lg:hover:text-[#151e2d]" />
-                <Twitter className="scale-75 md:scale-100 cursor-pointer transition-all delay-200 duration-200 lg:hover:scale-125 outline-none lg:hover:text-[#151e2d]" />
-                <Linkedin className="scale-75 md:scale-100 cursor-pointer transition-all delay-200 duration-200 lg:hover:scale-125 outline-none lg:hover:text-[#151e2d]" />
-                <Github className="scale-75 md:scale-100 cursor-pointer transition-all delay-200 duration-200 lg:hover:scale-125 outline-none lg:hover:text-[#151e2d]" />
+                <a
+                  href="https://www.instagram.com/thesnoozingturtles"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <Instagram className="scale-75 md:scale-100 cursor-pointer transition-all delay-100 duration-100 lg:hover:scale-125 outline-none" />
+                </a>
+                <Twitter className="scale-75 md:scale-100 cursor-pointer transition-all delay-100 duration-100 lg:hover:scale-125 outline-none" />
+                <a
+                  href="https://www.linkedin.com/in/thesnoozingturtle-924b08318"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <Linkedin className="scale-75 md:scale-100 cursor-pointer transition-all delay-100 duration-100 lg:hover:scale-125 outline-none" />
+                </a>
               </div>
             </div>
           </div>

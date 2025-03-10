@@ -53,7 +53,7 @@ const Navbar = () => {
         </button> */}
         <button
           onClick={toggleTheme}
-          className="relative w-[3.8rem] h-7 flex border border-gray-900 items-center dark:bg-gray-300 bg-[#24334e] rounded-full p-1 cursor-pointer transition-all duration-500"
+          className="relative w-[3.8rem] h-7 flex items-center dark:bg-gray-300 bg-[#24334e] rounded-full p-1 cursor-pointer transition-all duration-500"
           aria-label="Toggle Dark Mode"
         >
           <motion.div

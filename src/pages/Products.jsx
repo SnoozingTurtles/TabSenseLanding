@@ -68,7 +68,7 @@ function Products() {
 
     <div className="flex flex-col lg:flex-row items-start gap-8 md:gap-12 lg:gap-20">
       {/* Feature List */}
-      <div className="w-full lg:py-[40vh] font-semibold text-base sm:text-lg md:text-xl">
+      <div className="w-full lg:py-[40vh] font-medium text-base sm:text-lg md:text-xl">
         <ul className="space-y-4">
           {features.map((feature) => (
             <li key={feature.id}>
