@@ -47,10 +47,10 @@ const Footer = () => {
                 </a>
               </p>
               <div className="text-white flex md:gap-4">
-                <Instagram className="scale-75 md:scale-100 cursor-pointer transition-all delay-200 duration-200 hover:scale-125 outline-none lg:hover:text-[#151e2d]" />
-                <Twitter className="scale-75 md:scale-100 cursor-pointer transition-all delay-200 duration-200 hover:scale-125 outline-none lg:hover:text-[#151e2d]" />
-                <Linkedin className="scale-75 md:scale-100 cursor-pointer transition-all delay-200 duration-200 hover:scale-125 outline-none lg:hover:text-[#151e2d]" />
-                <Github className="scale-75 md:scale-100 cursor-pointer transition-all delay-200 duration-200 hover:scale-125 outline-none lg:hover:text-[#151e2d]" />
+                <Instagram className="scale-75 md:scale-100 cursor-pointer transition-all delay-200 duration-200 lg:hover:scale-125 outline-none lg:hover:text-[#151e2d]" />
+                <Twitter className="scale-75 md:scale-100 cursor-pointer transition-all delay-200 duration-200 lg:hover:scale-125 outline-none lg:hover:text-[#151e2d]" />
+                <Linkedin className="scale-75 md:scale-100 cursor-pointer transition-all delay-200 duration-200 lg:hover:scale-125 outline-none lg:hover:text-[#151e2d]" />
+                <Github className="scale-75 md:scale-100 cursor-pointer transition-all delay-200 duration-200 lg:hover:scale-125 outline-none lg:hover:text-[#151e2d]" />
               </div>
             </div>
           </div>
