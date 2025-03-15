@@ -54,7 +54,15 @@ const Footer = () => {
                 >
                   <Instagram className="scale-75 md:scale-100 cursor-pointer transition-all delay-100 duration-100 lg:hover:scale-125 outline-none" />
                 </a>
-                <Twitter className="scale-75 md:scale-100 cursor-pointer transition-all delay-100 duration-100 lg:hover:scale-125 outline-none" />
+                
+                <a
+                  href="https://x.com/snoozingturtle"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <Twitter className="scale-75 md:scale-100 cursor-pointer transition-all delay-100 duration-100 lg:hover:scale-125 outline-none" />
+                </a>
+
                 <a
                   href="https://www.linkedin.com/in/thesnoozingturtle-924b08318"
                   target="_blank"
